@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class review extends Model
 {
     //
+    protected $guarded = [];
     public function product(){
         return $this->belongsTo('App\product','product_id','id');
     }
