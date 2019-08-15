@@ -22,7 +22,16 @@ class ShoppingCartController extends Controller
         return redirect()->back();
     }
     public function shopping_cart(){
-        $carts = shoppingCart::where(['user_id'=>auth()->user()->id])->get();
+        $carts = shoppingCart::where(['user_id'=>auth()->user()->id , 'ordered'=>-1])->get();
         return view('user.shopping_cart',compact('carts'));
+    }
+    public function destroy(shoppingCart $cart){
+        $cart->delete();
+        return redirect()->back();
+
+    }
+    public function checkout(){
+        $carts = shoppingCart::where(['user_id'=>auth()->user()->id , 'ordered'=>-1])->get();
+        return view('user.checkout',compact('carts'));
     }
 }

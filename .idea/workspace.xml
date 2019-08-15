@@ -2,31 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bdb0d2d-685d-4629-8fdb-c70a7498a122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/masterView.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/Products.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/allProducts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/shopping_cart.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/singleCat.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/singleProduct.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/drowing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/drowing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_15_211616_add_forien_key_to_orders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tshirtshop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/checkout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReviewController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShoppingCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShoppingCartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/review.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoppingCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_27_213632_create_shopping_carts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_27_213632_create_shopping_carts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/masterView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/masterView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/shopping_cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/shopping_cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,8 +130,11 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1PPQLun19tDJpBTjzid2fJnksuP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user" />
@@ -208,6 +196,7 @@
       <workItem from="1565773229442" duration="8829000" />
       <workItem from="1565784763205" duration="3875000" />
       <workItem from="1565797234463" duration="49000" />
+      <workItem from="1565853372046" duration="17779000" />
     </task>
     <servers />
   </component>
@@ -240,6 +229,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

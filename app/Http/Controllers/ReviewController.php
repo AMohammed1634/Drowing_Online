@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\review;
 use App\product;
+use App\shoppingCart;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
@@ -15,9 +16,28 @@ class ReviewController extends Controller
 
         return redirect()->back();
     }
+
+    /**
+     * not Done yet
+     * @param product $product
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function getReviewsAPI(product $product){
         $reviews = review::where('product_id',$product->id)->get();
 
         return response()->json($reviews,200);
+    }
+
+
+    public function incrementQTY(shoppingCart $cart){
+        $cart->quantity++; // incrementQTY
+        $cart->save();
+        return response()->json(['mesage'=>'Done'],200);
+    }
+
+    public function decrementQTY(shoppingCart $cart){
+        $cart->quantity--; // incrementQTY
+        $cart->save();
+        return response()->json(['mesage'=>'Done'],200);
     }
 }

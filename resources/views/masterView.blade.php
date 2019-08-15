@@ -30,7 +30,14 @@
 
     <link rel="stylesheet" href="/css/style1.css">
     <link rel="stylesheet" href="/css/responsive.css">
-
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -74,7 +81,7 @@
             <div class="row align-items-center">
 
                 <div class="col-6 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="{{route('home')}}" class="text-black mb-0">Selling<span class="text-primary">.</span> </a></h1>
+                    <h1 class="mb-0 site-logo"><a href="{{route('home')}}" class="text-black mb-0"> <img src="/tshirtshop.png">{{--Selling<span class="text-primary">.</span> --}}</a></h1>
                 </div>
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
@@ -141,7 +148,7 @@
                                     <div id="mini-cart_topbar" class="mini-cart mini-cart_topbar_aj with-flyout" data-xleft-items="0" data-flyout-content="">
                                         <a href="{{route('shopping_cart')}}" id="miniCartClose" class="" data-translate="Cart" data-options="align:left" data-flyout="cartDrop_mobile">
                                             <i class="fa fa-opencart" style="color: #0d95e8;font-size: 25px"></i> {{---fi-cart-new--}}
-                                            <span class="cart-item-count-aj show-mini-cart-aj cart-icon-item-count">{{Auth::user()->shoppingCart->count()}}</span></a>
+                                            <span class="cart-item-count-aj show-mini-cart-aj cart-icon-item-count">{{ App\shoppingCart::where(['user_id'=>Auth::user()->id,'ordered'=>-1])->count()}}</span></a>
                                         <div id="cartDrop_topbar" class="cartDropItem cart-dropdown flyout " data-dropdown-content=""></div>
                                     </div>
                                 </li>

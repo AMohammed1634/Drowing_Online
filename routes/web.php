@@ -37,7 +37,13 @@ Route::get('addToCart/{product}','ShoppingCartController@addToCart')->name('addT
 
 Route::get('shopping_cart','ShoppingCartController@shopping_cart')->name('shopping_cart')->middleware('auth');
 
+Route::get('shopping_cart/destroy/{cart}','ShoppingCartController@destroy')->name('shopping_cart.destroy')->middleware('auth');
 
+Route::get('shopping_cart/checkout','ShoppingCartController@checkout')->name('shopping_cart.checkout')->middleware('auth');
 
+Route::get('incrementQTY/{cart}','ReviewController@incrementQTY')->middleware('auth');
 
+Route::get('decrementQTY/{cart}','ReviewController@decrementQTY')->middleware('auth');
+
+Route::post('makeOrder','OrderController@makeOrder')->name('makeOrder')->middleware('auth');
 
