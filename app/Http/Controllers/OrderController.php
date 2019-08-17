@@ -24,6 +24,9 @@ class OrderController extends Controller
             'ordered' => -1,
         ])->get();
         $total = 0;
+        if(count($carts) <1){
+            return redirect()->back()->withErrors(['message' => 'No products to orderring ']);
+        }
         foreach ($carts as $cart){
             if( $cart->product->discounted_price == 0)
                 $total += $cart->product->price * $cart->quantity;

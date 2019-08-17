@@ -11,6 +11,9 @@
 |
 */
 
+/**
+ * routes for User on System
+ */
 Route::get('/', function () {
     return view('welcome');
 });
@@ -47,3 +50,22 @@ Route::get('decrementQTY/{cart}','ReviewController@decrementQTY')->middleware('a
 
 Route::post('makeOrder','OrderController@makeOrder')->name('makeOrder')->middleware('auth');
 
+
+/**
+ * routes for admin on System
+ */
+
+Route::get('/dashboard','AdminController@lockscreen')->name('dashboard')->middleware('admin');
+Route::get('/asd','AdminController@dashboard')->middleware('admin');
+
+Route::get('/dashboard/orders','AdminController@orders')->name('dashboard.orders')->middleware('admin');
+
+Route::get('/dashboard/sales','AdminController@sales')->name('dashboard.sales')->middleware('admin');
+
+Route::get('/dashboard/registration','AdminController@registration')->name('dashboard.registration')->middleware('admin');
+
+Route::get('/dashboard/admin','AdminController@admin')->name('dashboard.admin')->middleware('admin');
+
+Route::get('/lockscreen','AdminController@lockscreen')->name('lockscreen')->middleware('admin');
+
+Route::post('/lockscreen','AdminController@lockscreenLogin')->name('lockscreenLogin')->middleware('admin');
