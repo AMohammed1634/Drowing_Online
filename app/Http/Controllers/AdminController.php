@@ -45,7 +45,13 @@ class AdminController extends Controller
     }
 
     public function sales(){
-        return shoppingCart::all();
+        $carts = shoppingCart::paginate(9);
+        $orders = order::all()->count();
+        $users = User::where('role_id',1)->get()->count();
+        $admins = User::where('role_id',3)->get()->count();
+        //return $carts;
+        return view('admin.sales',compact('carts','users','admins','orders'));
+
     }
 
     public function registration(){

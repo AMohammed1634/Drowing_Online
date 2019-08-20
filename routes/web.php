@@ -54,25 +54,28 @@ Route::post('makeOrder','OrderController@makeOrder')->name('makeOrder')->middlew
 /**
  * routes for admin on System
  */
+Route::group(['middleware'=>'admin'],function (){
 
-Route::get('/dashboard','AdminController@lockscreen')->name('dashboard')->middleware('admin');
-Route::get('/asd','AdminController@dashboard')->name('dashboard.asd')->middleware('admin');
+    Route::get('/dashboard','AdminController@lockscreen')->name('dashboard');
+    Route::get('/asd','AdminController@dashboard')->name('dashboard.asd')->middleware('admin');
 
-Route::get('/dashboard/orders','AdminController@orders')->name('dashboard.orders')->middleware('admin');
+    Route::get('/dashboard/orders','AdminController@orders')->name('dashboard.orders')->middleware('admin');
 
-Route::get('/dashboard/order/{order}','AdminController@singleOrder')->name('dashboard.order')->middleware('admin');
+    Route::get('/dashboard/order/{order}','AdminController@singleOrder')->name('dashboard.order')->middleware('admin');
 
-Route::get('/dashboard/sales','AdminController@sales')->name('dashboard.sales')->middleware('admin');
+    Route::get('/dashboard/sales','AdminController@sales')->name('dashboard.sales')->middleware('admin');
 
-Route::get('/dashboard/registration','AdminController@registration')->name('dashboard.registration')->middleware('admin');
-Route::get('/dashboard/registration/user/{user}','AdminController@userProfile')->name('dashboard.userProfile')->middleware('admin');
+    Route::get('/dashboard/registration','AdminController@registration')->name('dashboard.registration')->middleware('admin');
+    Route::get('/dashboard/registration/user/{user}','AdminController@userProfile')->name('dashboard.userProfile')->middleware('admin');
 
-Route::get('/dashboard/admin','AdminController@admin')->name('dashboard.admin')->middleware('admin');
+    Route::get('/dashboard/admin','AdminController@admin')->name('dashboard.admin')->middleware('admin');
 
-Route::get('/lockscreen','AdminController@lockscreen')->name('lockscreen')->middleware('admin');
+    Route::get('/lockscreen','AdminController@lockscreen')->name('lockscreen')->middleware('admin');
 
-Route::post('/lockscreen','AdminController@lockscreenLogin')->name('lockscreenLogin')->middleware('admin');
+    Route::post('/lockscreen','AdminController@lockscreenLogin')->name('lockscreenLogin')->middleware('admin');
 
-Route::post('/dashboard/search','AdminController@searchUser')->name('searchUser')->middleware('admin');
+    Route::post('/dashboard/search','AdminController@searchUser')->name('searchUser')->middleware('admin');
 
-Route::put('/dashboard/registration/update/{user}','AdminController@update')->middleware('admin');
+    Route::put('/dashboard/registration/update/{user}','AdminController@update')->middleware('admin');
+
+});
