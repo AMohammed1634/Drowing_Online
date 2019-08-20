@@ -62,9 +62,9 @@ desired effect
         <!-- Logo -->
         <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
+            <span class="logo-mini"><b>T</b>SS</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-lg"><b>TShirt</b>Shop</span>
         </a>
 
         <!-- Header Navbar -->
@@ -196,7 +196,7 @@ desired effect
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="{{route('dashboard.userProfile',Auth::user()->id)}}" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{{ route('logout') }}"
@@ -258,8 +258,8 @@ desired effect
 
                 {{----}}
 
-                <li class="active treeview">
-                    <a href="{{route('dashboard')}}">
+                <li class="active ">
+                    <a href="{{route('dashboard.asd')}}">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
@@ -394,7 +394,8 @@ desired effect
 <script src="/js/app.js"></script>
 <!-- AdminLTE App -->
 <script src="/admin/dist/js/adminlte.min.js"></script>
-
+<script src="/admin/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="/admin/dist/js/demo.js"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->

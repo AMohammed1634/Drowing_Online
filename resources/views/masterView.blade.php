@@ -98,6 +98,11 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="{{route('categories')}}">Categories</a>
                                     <a class="dropdown-item" href="{{route('product.index')}}">Products</a>
+                                    @if(Auth::check())
+                                        @if(Auth::user()->role_id == 3)
+                                            <a href="{{route('dashboard')}}" class="dropdown-item">Dashboard <small>-->admin<--</small></a>
+                                        @endif
+                                    @endif
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </li>
@@ -114,6 +119,7 @@
 
                             <li><a href="#blog-section" class="nav-link">Blog</a></li>
                             <li><a href="#contact-section" class="nav-link">Contact</a></li>
+
                             @guest
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

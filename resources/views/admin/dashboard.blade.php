@@ -106,7 +106,7 @@
                             {{--work here--}}
                             @foreach($lastOreders as $order)
                             <tr>
-                                <td><a href="">{{$order->shopping_id}}</a></td>
+                                <td><a href="{{route('dashboard.order',$order->id)}}">{{$order->shopping_id}}</a></td>
                                 <td style="width: 250px;">
                                     <div class="box box-default collapsed-box">
                                         <div class="box-header with-border">
