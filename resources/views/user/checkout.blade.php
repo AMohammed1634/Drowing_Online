@@ -62,8 +62,7 @@
                             <!-- E-mail -->
                             <input type="text" id="street" name="street" class="form-control mb-4" placeholder="Street Name/No.	*">
 
-                            <!-- Password -->
-                            <input type="text" id="locationType" class="form-control mb-4" name="locationType" placeholder="Location Type" >
+
 
 
                             <!-- Phone number -->
@@ -101,12 +100,7 @@
                                     }else{
                                         document.getElementById('street').style.borderColor = "#ced4da";
                                     }
-                                    if(document.getElementById('locationType').value.length<=0){
-                                        document.getElementById('locationType').style.borderColor = "#F00";
-                                        error = false;
-                                    }else{
-                                        document.getElementById('locationType').style.borderColor = "#ced4da";
-                                    }
+
                                     if(document.getElementById('phone').value.length<=0){
                                         document.getElementById('phone').style.borderColor = "#F00";
                                         error = false;

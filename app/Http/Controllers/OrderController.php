@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\order;
 use App\shoppingCart;
+use App\UserInfo;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -15,8 +16,19 @@ class OrderController extends Controller
             'city'      => 'required',
             'area'      => 'required',
             'street'    => 'required',
-            'locationType'=> 'required',
+
             'phone'     => 'required|regex:/(01)[0-9]{9}/'
+        ]);
+
+        UserInfo::create([
+            'user_id'   => auth()->user()->id,
+            'last_name' => $request->lastName,
+            'area'      => $request->area,
+            'street_name' => $request->street,
+            'phone'     => $request->phone,
+            //'city '     => $request->city,
+            'city' => $request->city
+
         ]);
         //dd($request->all());
         $carts =shoppingCart::where([

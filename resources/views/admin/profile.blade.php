@@ -45,11 +45,41 @@
                     </ul>
 
                 </div>
+
                 <!-- /.box-body -->
+
             </div>
             <!-- /.box -->
+            @if(!is_null($user->user_info))
+            <div class="box box-primary" style="">
+                <div class="box-header with-border">
+                    <h3 class="box-title">About Me</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+
+                    <p class="text-muted">
+                        B.S. in Computer Science from the University of Tennessee at Knoxville
+                    </p>
+
+                    <hr>
+
+                    <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+
+                    <p class="text-muted">{{$user->user_info->city}}, {{$user->user_info->area}} , {{$user->user_info->street_name}}</p>
 
 
+                    <hr>
+
+                    <strong><i class="fa fa-phone margin-r-5"></i> Phone</strong>
+
+                    <p>{{$user->user_info->phone}}.</p>
+                </div>
+
+                <!-- /.box-body -->
+            </div>
+            @endif
         </div>
         <!-- /.col -->
         <div class="col-md-9">

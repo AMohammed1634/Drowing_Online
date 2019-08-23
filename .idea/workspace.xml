@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bdb0d2d-685d-4629-8fdb-c70a7498a122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/sales.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/productCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/UserInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_20_215504_create_user_infos_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_15_211616_add_forien_key_to_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_20_220916_add_forien_key.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/masterView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/masterView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -196,7 +208,11 @@
       <workItem from="1566159819343" duration="16247000" />
       <workItem from="1566242553925" duration="1557000" />
       <workItem from="1566289994198" duration="5442000" />
-      <workItem from="1566328232501" duration="6661000" />
+      <workItem from="1566328232501" duration="10006000" />
+      <workItem from="1566374399835" duration="7571000" />
+      <workItem from="1566417390285" duration="3755000" />
+      <workItem from="1566474748343" duration="2984000" />
+      <workItem from="1566549149392" duration="3711000" />
     </task>
     <servers />
   </component>

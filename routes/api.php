@@ -18,3 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/review/{product}' , 'ReviewController@getReviewsAPI');
+
+Route::get('/products','APIController@AllProducts');
+
+Route::get('/products/{product}','APIController@Product');
+
+Route::post('/products/create','APIController@createProduct');
+
+Route::apiResource("user","APIController");
